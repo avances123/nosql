@@ -2,21 +2,31 @@
 # This Playbook would deploy the whole mongodb cluster with replication and sharding.
 
 - hosts: all
+  sudo: yes
+  remote_user: vagrant
   roles:
    - role: common
 
 - hosts: mongo_servers
+  sudo: yes
+  remote_user: vagrant
   roles:
   - role: mongod
 
 - hosts: mongoc_servers
+  sudo: yes
+  remote_user: vagrant
   roles:
   - role: mongoc
 
 - hosts: mongos_servers
+  sudo: yes
+  remote_user: vagrant
   roles:
   - role: mongos
 
 - hosts: mongo_servers
+  sudo: yes
+  remote_user: vagrant
   tasks:
   - include: roles/mongod/tasks/shards.yml 
