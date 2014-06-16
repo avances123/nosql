@@ -1,0 +1,10 @@
+Jinja2==2.7.3
+MarkupSafe==0.23
+argparse==1.2.1
+backports.ssl-match-hostname==3.4.0.2
+ipython==2.1.0
+pymongo==2.7.1
+pyzmq==14.3.1
+redis==2.10.1
+tornado==3.2.2
+wsgiref==0.1.2
